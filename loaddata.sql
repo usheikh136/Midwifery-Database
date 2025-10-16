@@ -1,0 +1,191 @@
+-- Include your INSERT SQL statements in this file.
+-- Make sure to terminate each statement with a semicolon (;)
+
+-- LEAVE this statement on. It is required to connect to your database.
+CONNECT TO cs421;
+
+INSERT INTO BirthingInstitution (Email,Name,Address,Website,PhoneNumber) VALUES
+ ('aliquetmagna@outlook.com','Aliquet Magna Hospital','672-6708 Pharetra. Ave','aliquetmagna.ca','(527) 459-8676'),
+ ('viverrahealthcentre@icloud.com','Viverra Health Centre','Ap #709-1380 Ridiculus Road','viverrahealthcentre.com','(541) 956-4151'),
+ ('turpishealth@yahoo.ca','Turpis Health','P.O. Box 354, 2940 Ligula. Avenue','turpishealth.ca','(227) 624-8647'),
+ ('mauriseuhealth@protonmail.ca','Mauris Eu Memorial Health Clinic','299-3934 Donec Street','mauriseuhealth.com','(172) 766-5781'),
+ ('tellusbirthingcentre@gmail.com','Tellus Birthing Centre','Ap #732-6642 Nam Street','tellusbirthingcentre.com','(332) 258-3164'),
+ ('olegmolinahealth@outlook.org','Oleg Molina Health','288-9459 Gravida Av.','olegmolinahealth.ca','(227) 241-1870'),
+ ('ferrismayobirthingcentre@gmail.ca','Ferris Mayo Birthing Centre','Ap #333-3598 Faucibus Avenue','ferrismayobirthingcentre.com','(248) 811-9738'),
+ ('jerryfischerclinic@yahoo.com','Jerry Fischer Clinic','926-2591 Nisi. St.','jerryfischerclinic.com','(614) 274-2593'),
+ ('paulahickmanmemorial@yahoo.com','Paula Hickman Memorial Hospital','Ap #921-9728 Sapien, Rd.','paulahickmanmemorial.ca','(124) 788-6144'),
+ ('rossmidwife@gmail.com','Ross Midwife Clinic','Ap #459-4168 Venenatis Rd.','rossmidwife.com','(560) 179-3463'),
+ ('lacsaintlouis@gmail.com','Lac-Saint-Louis','121 Pebble Street','lacsaintlouis.ca','(541) 223-9213');
+
+INSERT INTO BirthingCentre (InstitutionEmail) VALUES
+('aliquetmagna@outlook.com'),
+('tellusbirthingcentre@gmail.com'),
+('turpishealth@yahoo.ca'),
+('ferrismayobirthingcentre@gmail.ca'),
+('rossmidwife@gmail.com'),
+('lacsaintlouis@gmail.com');
+
+INSERT INTO CommunityClinic (InstitutionEmail) VALUES
+('viverrahealthcentre@icloud.com'),
+('mauriseuhealth@protonmail.ca'),
+('paulahickmanmemorial@yahoo.com'),
+('jerryfischerclinic@yahoo.com'),
+('olegmolinahealth@outlook.org');
+
+INSERT INTO Midwife (PractitionerID,Name,Email,PhoneNumber,InstitutionEmail) VALUES
+ (914583096,'Marion Girard','timothyhaynes9548@aol.com','(451) 423-2949','aliquetmagna@outlook.com'),
+ (380990189,'Xanthus Holloway','xanthusholloway@icloud.ca','(784) 846-5341','viverrahealthcentre@icloud.com'),
+ (443035811,'Daniel Bowen','danielbowen2466@aol.com','(772) 901-3586','aliquetmagna@outlook.com'),
+ (942353426,'Perry Hamilton','perryhamilton210@yahoo.com','(674) 429-3418','aliquetmagna@outlook.com'),
+ (623477305,'Tate Calhoun','tatecalhoun@hotmail.ca','(311) 126-1377','turpishealth@yahoo.ca'),
+ (746091567,'Iola Horne','iolahorne2332@google.ca','(938) 241-5251','mauriseuhealth@protonmail.ca'),
+ (644663673,'Aquila Guzman','aquilaguzman@google.ca','(327) 867-4845','turpishealth@yahoo.ca'),
+ (938649249,'Rashad Mcdaniel','rashadmcdaniel1314@google.com','(240) 834-6622','tellusbirthingcentre@gmail.com'),
+ (561910828,'Perry Bates','perrybates@hotmail.ca','(959) 426-0299','tellusbirthingcentre@gmail.com'),
+ (721026107,'Moana Mayer','moanamayer6321@google.com','(394) 342-1539','mauriseuhealth@protonmail.ca'),
+ (103342223,'James Rond','jamesrond@lacsaintlouis.ca','(514) 332-3331','lacsaintlouis@gmail.com'),
+ (524211664,'Rames Jond','ramesjond@lacsaintlouis.ca','(514) 223-1113','lacsaintlouis@gmail.com');
+
+INSERT INTO InformationSession (SessionID,PractitionerID,Language,Time,Date) VALUES
+ (6459,914583096,'English','12:28:00','2022-09-22'),
+ (8180,380990189,'English','23:28:00','2022-05-13'),
+ (9148,914583096,'French','22:28:00','2022-05-03'),
+ (3084,914583096,'English','17:28:00','2022-05-08'),
+ (7306,443035811,'English','00:28:00','2022-09-14'),
+ (4954,942353426,'French','21:28:00','2022-12-29'),
+ (4181,623477305,'French','13:28:00','2022-04-19'),
+ (7830,746091567,'Spanish','05:28:00','2022-05-30'),
+ (5778,443035811,'French','01:28:00','2022-01-24'),
+ (9167,443035811,'Arabic','20:28:00','2022-06-26');
+
+INSERT INTO Patient (PatientID, Blood_Type) VALUES
+(4681020,NULL),
+(7100281,'A+'),
+(4199483,'B-'),
+(1177161,'AB+'),
+(8099976,'O-'),
+(1714791,'AB-'),
+(4101297,'A+'),
+(7923643,'AB-'),
+(2282533,NULL),
+(7871628,NULL),
+(7539200,'A+'),
+(4423234,'B-'),
+(1121312, 'A-'),
+(7774232, 'B+');
+
+INSERT INTO Mother (PatientID, Name, Address, PhoneNumber, HealthCardNum, Email, DOB) VALUES
+(7100281,'Brynne Odom','P.O. Box 893, 4334 Nec, Road','(554) 422-1285','ODOB 1779 9109','brynneodom4209@hotmail.com','1989-11-29'),
+(1177161,'Rama Perry','569-5254 Nec Avenue','(649) 981-0494','PERR 3192 8256','ramaperry465@outlook.com','1989-02-20'),
+(1714791,'Isabella Gonzales','827-463 Lacus Ave','(466) 625-9394','GONI 1303 0157','isabellagonzales@outlook.ca','1998-05-25'),
+(4101297,'Emma Joseph','P.O. Box 523, 1393 Sollicitudin Avenue','(850) 869-6850','JOSE 4346 9917','emmajoseph@outlook.com','1983-07-23'),
+(7923643,'Victoria Gutierrez','7659 Natoque Street','(650) 588-9459','MARG 3812 0430','victoriaguiterrez@gmail.com','1995-06-15'),
+(1121312, 'Maria Charles', '424 Cottoncandy Avenue','(416) 447-2132', 'CHAM 2121 4442','maria.charles10011@outlook.com','1999-09-09'),
+(7774232, 'Natalie Jacobs', '99 Euphoria Street', '(514) 444-1112', 'JACN 3312 0090', 'njacobs8008@gmail.com', '1994-11-21');
+
+INSERT INTO Father (FatherID, Name, BloodType, Address, Email, DOB, HealthCardNum, PhoneNumber, Profession) VALUES
+(5166186,'Stewart Frazier','O+','967-7201 Ac Rd.','stewartfrazier@hotmail.ca','2001-03-13','FRAS 9937 1605','(887) 357-8328','Architect'),
+(6778171,'Nathan Torres','B-','407-5685 Nunc Road','nathantorres@aol.com','1990-09-05','TORN 54002240','(389) 275-5475','Self-Employed'),
+(4830516,'Louis Evans','B-','848-679 Ligula. Av.','louisevans5230@aol.ca','1988-02-24','EVAL 9088 8228','(883) 468-8122','Influencer'),
+(3170794,'Connor Dodson','A-','Ap #878-8515 Tellus Avenue','connordodson9259@google.ca','1999-07-15','DODC 2900 7846','(860) 857-8382','Software Developer'),
+(5143564,'Hayden Stafford','A+','Ap #761-3696 Magna. Ave','haydenstafford@google.ca','1985-03-13','STAH 3886 5939','(288) 823-5018','Carpenter');
+
+INSERT INTO Parents (ParentsID, MotherID, FatherID) VALUES
+ (939060,7100281,5166186),
+ (116555,1177161,6778171),
+ (159699,1714791,4830516),
+ (719633,4101297,3170794),
+ (441052,7923643,5143564),
+ (090921,1121312,6778171),
+ (313432,7774232,5143564);
+
+INSERT INTO ISRegistrants (ParentsID, SessionID, Attended) VALUES
+ (939060,6459, 'Yes'),
+ (116555,7306, 'Yes'),
+ (159699,4954, 'Yes'),
+ (719633,7830, 'Yes'),
+ (441052,9148, 'Yes');
+
+INSERT INTO Pregnancy (PregnancyID, PregnancyNumber, MenstrualDD, DatingUltraDD, ExpectedBirth, FinalDue, PrimaryMidwifeID, BackupMidwifeID, ParentsID, InstitutionEmail) VALUES
+ (8828694,4,'2022-07-10','2022-07-21','2022-07-01','2022-07-10',914583096,443035811,939060,'aliquetmagna@outlook.com'),
+ (3410598,1,'2021-04-27','2021-04-22','2021-04-01','2021-04-22',623477305,644663673,116555,'turpishealth@yahoo.ca'),
+ (2111521,1,'2021-08-13','2021-08-01','2021-08-01','2021-08-13',914583096,443035811,159699,'aliquetmagna@outlook.com'),
+ (9225140,1,'2021-04-01','2021-04-05','2021-03-01','2021-04-01',938649249,561910828,719633,'tellusbirthingcentre@gmail.com'),
+ (1721798,2,'2021-09-20','2021-09-20','2021-09-01','2021-09-20',644663673,623477305,441052,'tellusbirthingcentre@gmail.com'),
+ (0122211,2,'2022-07-01','2022-07-03','2022-06-01','2022-07-03',103342223,524211664,090921,'lacsaintlouis@gmail.com'),
+ (2022323,1,'2022-09-21','2022-09-12','2022-09-01','2022-09-21',524211664,103342223,313432,'lacsaintlouis@gmail.com');
+
+INSERT INTO Baby (PatientID, PregnancyID, Name, Gender, DOB, TOB) VALUES
+(4681020,1721798,'Odysseus Kelley','Female','2021-11-26','20:28:00'),
+(4199483,3410598,'Cadman Gonzales','Male','2021-06-25','07:28:00'),
+(8099976,2111521,'Karina Salas','Female','2021-12-24','22:45:00'),
+(2282533,9225140,'Xanthus Diaz','Male','2021-03-29','05:28:00'),
+(7871628,1721798,'Chad Garrett','Male','2021-07-31','04:20:00'),
+(7539200,1721798,'Samantha Kelley','Female','2021-11-26','20:33:00'),
+(4423234,2111521,'Mario Salas','Male','2021-12-24','22:28:00');
+
+INSERT INTO BirthedAtBirthingCentre (PregnancyID, BirthingCentreEmail) VALUES
+ (8828694,'aliquetmagna@outlook.com'),
+ (3410598,'turpishealth@yahoo.ca'),
+ (2111521,'aliquetmagna@outlook.com'),
+ (9225140,'tellusbirthingcentre@gmail.com'),
+ (1721798,'tellusbirthingcentre@gmail.com');
+
+INSERT INTO Appointment (AppointmentID, Date, Time, PregnancyID) VALUES
+ (8882783,'2022-03-21','15:28:00',8828694),
+ (8668178,'2021-08-11','19:28:00',3410598),
+ (7510146,'2022-03-23','18:28:00',2111521),
+ (6945594,'2021-04-20','12:28:00',9225140),
+ (5886082,'2021-02-06','06:28:00',1721798);
+
+INSERT INTO AppointmentSchedules (PractitionerID, AppointmentID) VALUES
+ (914583096,8882783),
+ (623477305,8668178),
+ (443035811,7510146),
+ (938649249,6945594),
+ (644663673,5886082);
+
+INSERT INTO Note (NoteID, AppointmentID, Date, Time) VALUES
+ (3361184,8882783,'2021-08-07','17:28:00'),
+ (6163389,8668178,'2021-09-15','00:28:00'),
+ (5769062,7510146,'2021-02-03','19:28:00'),
+ (9562567,6945594,'2021-03-14','18:28:00'),
+ (4547555,5886082,'2021-10-13','01:28:00');
+
+INSERT INTO Test (TestID, Type, Prescribed, SampleTaken, LabDone, Result, PractitionerID) VALUES
+ (3260001,'Blood Type Test','2021-06-06','2021-06-06','2021-06-09','A+',914583096),
+ (1369305,'First Trimester Ultrasound','2021-05-24','2021-05-27','2021-06-01','Normal',623477305),
+ (8087884,'Blood Type Test','2021-08-24','2021-09-30','2021-10-03','O-',443035811),
+ (7164943,'Blood Iron Test','2021-11-20','2021-11-22','2021-11-23','High',938649249),
+ (5317025,'Blood Type Test','2021-10-31','2021-11-04','2021-11-05','AB-',914583096),
+ (6633045,'Blood Iron Test','2021-03-12','2021-03-20','2021-03-22','Low',644663673),
+ (7832441,'Blood Iron Test','2021-05-02','2021-05-03','2021-05-05','Normal',644663673);
+
+INSERT INTO Test (TestID, Type, Prescribed, SampleTaken, LabDone, Result, PractitionerID)
+VALUES (6942011,'Blood Type Test','2021-03-03','2021-03-04','2021-03-02','A+',914583096);
+
+
+INSERT INTO TestCompletedFor (TestID, PatientID) VALUES
+ (3260001,7100281),
+ (1369305,1177161),
+ (8087884,1714791),
+ (7164943,4101297),
+ (5317025,4681020),
+ (6633045,7923643),
+ (7832441,7923643);
+
+INSERT INTO Technician (TechnicianID, Name, PhoneNumber) VALUES
+ (3991749,'Ruby Santiago','(765) 881-8878'),
+ (8299963,'Drew Lynn','(657) 696-8584'),
+ (7541865,'Chandler George','(571) 249-9008'),
+ (3398417,'Kamal Flores','(538) 697-5350'),
+ (9194596,'Aretha Sims','(179) 846-6726');
+
+INSERT INTO TestCompletedBy (TestID, TechnicianID) VALUES
+ (3260001,3991749),
+ (1369305,8299963),
+ (8087884,7541865),
+ (7164943,3398417),
+ (5317025,9194596),
+ (6633045,8299963),
+ (7832441,9194596);
